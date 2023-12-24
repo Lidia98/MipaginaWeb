@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Sitio Web</title>
+    <!-- CdN Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- JavaScript de Bootstrap (opcional, pero necesario para ciertas funcionalidades de Bootstrap) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    
+   <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body >
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+
+    <div class="container">
+        <a href="#" class="navbar-brand"> <span class="text-primary">Frases</span>BI</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarS"
+            aria-controls="navbarS" aria-expanded="false" aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+        <div class="collapse navbar-collapse" id="navbarS">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Sobre nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Equipo</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Contactos</a>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+<div id="carouselExampleDark" class="carousel carousel-dark slide">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+            <img src="img/jesus.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>TODO LO PUEDO EN CRISTO QUE ME FORTALECE</h5>
+                <h2>Filipenses 4:13</h2>
+            </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+            <img src="img/amanecer.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>NOSOSTROS LE AMAMOS A ÉL, PORQUE ÉL NOS AMÓ PRIMERO</h5>
+                <h2>1 Juan 4:19</h2>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="img/atardecer.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>NO TENGAS MIEDO SOLO TEN FÉ</h5>
+                <h2>San Marcos 5:36</h2>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+    </button>
+</div>
+               <!-- Sección de Comentarios -->
+    <section class="about-section-padding">
+        <div class="container">
+            <div class="row">         
+                <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
+                    <div class="container mt-5">
+                        <h4>Agregar Mi Frase favorita</h4>
+                        <form id="commentForm">
+                            <div class="mb-3">
+                                
+                                <input type="text" class="form-control" placeholder="Libro, capitulo y Versiculo" id="userName" required="">
+                            </div>
+                            <div class="mb-3">
+                            
+                                <textarea class="form-control" id="commentText" placeholder="Ingrese la frase" rows="2" required=""></textarea>
+                            </div>
+                           
+                                <button type="button" class="btn btn-primary " onclick="submitComment()">Enviar</button>
+                        
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 col-12">
+                    <div class="container mt-3" id="commentList"><div class="card mb-3">
+                        <div class="card-body">
+                            <h6 class="card-title">fge</h6>
+                            <h7 class="card-text">eheh</h7>
+                            <button class="btn btn-danger" onclick="deleteComment(2)">Eliminar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="portafolio section-padding">
+        <div class="container">
+            <div row="">
+                <div class="col-md-12">
+                    <div class="section-header text-center text-black pb-5">
+                        <h2>Frases Mas Buscadas</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md col-lg-4">
+                    <div class="card text-light text-center bg-dark pb-2">
+                        <div class="card-body text-white">
+                            <div class="img-area mb-4">
+                                <img src="img/bi-1.jpg" class="img-fluid" alt="">
+
+                            </div>
+                            <h3>Marcos 9:23</h3>
+                            <p class="lead">
+                                “Y Jesús le dijo: Si puedes creer, al que cree todo es posible” 
+                            </p>
+                            <button class="btn bg-primary text-white">Mas informacion</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md col-lg-4">
+                    <div class="card text-light text-center bg-dark pb-2">
+                        <div class="card-body text-white">
+                            <div class="img-area mb-4">
+                                <img src="img/bi-2.jpg" class="img-fluid" alt="">
+
+                            </div>
+                            <h3>Isaias 40:29</h3>
+                            <p class="lead">
+                                “El da fuerzas al fatigado, y al que no tiene fuerzas, aumenta el vigor”
+                            </p>
+                            <button class="btn bg-primary text-white">Mas informacion</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md col-lg-4">
+                    <div class="card text-light text-center bg-dark pb-2">
+                        <div class="card-body text-white">
+                            <div class="img-area mb-4">
+                                <img src="img/bi-3.jpg" class="img-fluid" alt="">
+
+                            </div>
+                            <h3>Salmos 116:17</h3>
+                            <p class="lead">
+                                “Te ofreceré sacrificio de alabanza, E invocaré el nombre de Jehová”
+                            </p>
+                            <button class="btn bg-primary text-white">Mas informacion</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-header text-center text-black pb-5">
+                    <h2>Ultimas Noticias</h2>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card text-center bg-dark">
+                    <div class="card-body text-white">
+                        <img src="img/img00.jpg" class="img-fluid rounded-circle" alt="">
+                        <h3 class="card-title py-2">Noticia</h3>
+                        <p class="card-text">
+                            Soldado cristiano evangélico es asesinado en Gaza defendiendo a Israel, “Está con Jesús”
+                        </p>
+                        
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card text-center bg-dark">
+                    <div class="card-body text-white">
+                        <img src="img/img11.jpg" class="img-fluid rounded-circle" alt="">
+                        <h3 class="card-title py-2">Noticia</h3>
+                        <p class="card-text">
+                            Lewis compartió «profecía» sobre el mundo actual, que no distingue entre el bien y el mal
+                        </p>   
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card text-center bg-dark">
+                    <div class="card-body text-white">
+                        <img src="img/img22.jpg" class="img-fluid rounded-circle" alt="">
+                        <h3 class="card-title py-2">Noticia</h3>
+                        <p class="card-text">
+                            Veterano cristiano destruyó altar satánico puesto en Capitolio.
+                        </p>
+                    </div>
+
+                </div>
+            </div> 
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card text-center bg-dark">
+                    <div class="card-body text-white">
+                        <img src="img/img33.jpg" class="img-fluid rounded-circle" alt="">
+                        <h3 class="card-title py-2">Noticia</h3>
+                        <p class="card-text">
+                            «Bautizamos cada semana» Cientos de refugiados aceptan a Jesús en Sudán
+                        </p>
+                      
+                    </div>
+
+                </div>
+
+            </div>
+            
+
+        </div>
+        <br>
+    </div>
+    <footer class="bg-dark p-2 text-center">
+        <div class="container">
+              <div class="card text-center bg-dark">
+                  <div class="card-body text-white">
+                      
+                      <h3 class="card-title py-2">Para mas frases siguenos en: </h3>
+                      
+                      <p class="sociales">
+                          <i class="bi bi-twitter text-white mx-3"></i>
+                          <i class="bi bi-facebook text-white mx-3"></i>
+                          <i class="bi bi-linkedin text-white mx-3"></i>
+                          <i class="bi bi-instagram text-white mx-3"></i>
+                          <i class="bi bi-whatsApp text-white mx-3"></i>
+  
+                      </p>
+  
+                  </div>
+  
+              </div>
+        
+  
+    </div></footer>
+        <script src="javascrip.js"></script>
+        
+    </footer>
